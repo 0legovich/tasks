@@ -23,10 +23,11 @@ export class NewCard extends React.PureComponent {
 
   render() {
     const { title, text, titleErrors, textErrors } = this.state;
-    const { onCreateNewCard } = this.props;
+    const { onCreateNewCard, onClose } = this.props;
 
     return (
       <div>
+        <span style={styles.closeBtn} onClick={onClose}>X</span>
         <div style={styles.wrapper}>
           <br />
           <p>
@@ -128,6 +129,14 @@ const styles = {
     position: "absolute",
     left: 0,
     bottom: 0
+  },
+  closeBtn: {
+    position: "absolute",
+    right: 0,
+    top: 0,
+    margin: 20,
+    fontSize: 25,
+    cursor: "pointer"
   }
 };
 

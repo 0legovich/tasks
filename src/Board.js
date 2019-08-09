@@ -16,6 +16,7 @@ class Board extends React.PureComponent {
     const { cards } = this.state;
     return (
       <NewCard
+        onClose={() => this.setState({newCardForm: false})}
         onCreateNewCard={data =>
           this.setState({ cards: cards.concat(data), newCardForm: false })
         }
