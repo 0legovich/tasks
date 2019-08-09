@@ -27,7 +27,9 @@ export class NewCard extends React.PureComponent {
 
     return (
       <div>
-        <span style={styles.closeBtn} onClick={onClose}>X</span>
+        <span style={styles.closeBtn} onClick={onClose}>
+          X
+        </span>
         <div style={styles.wrapper}>
           <br />
           <p>
@@ -110,11 +112,15 @@ const styles = {
   },
   textInput: {
     width: "100%",
-    height: 20
+    height: 20,
+    borderRadius: 5,
+    border: '.5px solid darkgray'
   },
   textArea: {
     width: "100%",
-    height: 120
+    height: 120,
+    borderRadius: 5,
+    border: '.5px solid darkgray'
   },
   errorText: {
     color: "red",
@@ -124,11 +130,13 @@ const styles = {
   submitBtn: {
     width: "100%",
     height: 45,
-    border: ".5px solid darkgray",
+    border: "0px solid darkgray",
     borderRadius: 5,
     position: "absolute",
     left: 0,
-    bottom: 0
+    bottom: 0,
+    cursor: "pointer",
+    backgroundColor: "#cfcfcf"
   },
   closeBtn: {
     position: "absolute",
